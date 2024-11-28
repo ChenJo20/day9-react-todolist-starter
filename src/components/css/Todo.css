@@ -1,0 +1,13 @@
+.todo-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.todo-text-wrapper {
+    background-color: white;
+    border: gray 2px solid;
+    border-radius: 2%;
+    width: 250px;
+    margin-right: 10px;
+}
