@@ -1,6 +1,4 @@
-.todo-generator-wrapper {
 
-}
 
 .todo-generator-button {
     margin-left: 10px;
@@ -10,5 +8,6 @@
 }
 
 .todo-generator-input {
-    width: 250px
+    min-width: 200px;
+    height: 20px;
 }

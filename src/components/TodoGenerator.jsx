@@ -15,7 +15,7 @@ const TodoGenerator = () => {
         dispatch({type: "ADD", payload: text});
     }
     return (
-        <div className={"todo-generator-wrapper"}>
+        <div>
             <input value={text}
                    onChange={handleChange}
                    className={"todo-generator-input"}
