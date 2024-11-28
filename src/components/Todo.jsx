@@ -8,6 +8,10 @@ const Todo = (props) => {
         console.log(props.todo.id)
         dispatch({type: "CHANGEDONESTATUS", payload: props.todo.id})
     }
+    const handleRemove = () => {
+        console.log(props.todo.id)
+        dispatch({type: "REMOVE", payload: props.todo.id})
+    }
     return (
         <div className={"todo-wrapper"}>
             <button onClick={handleChangeDoneStatus} className={"todo-text-wrapper"}>
@@ -15,7 +19,7 @@ const Todo = (props) => {
                     {props.todo.text}
                 </span>
             </button>
-            <button onClick={handleChangeDoneStatus}>×</button>
+            <button onClick={handleRemove}>×</button>
         </div>
     )
 }
