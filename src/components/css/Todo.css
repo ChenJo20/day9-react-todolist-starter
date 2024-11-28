@@ -11,3 +11,8 @@
     width: 250px;
     margin-right: 10px;
 }
+
+.line-through {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+}

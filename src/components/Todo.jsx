@@ -15,7 +15,7 @@ const Todo = (props) => {
     return (
         <div className={"todo-wrapper"}>
             <button onClick={handleChangeDoneStatus} className={"todo-text-wrapper"}>
-                <span style={{textDecoration: props.todo.done ? "line-through" : "none"}}>
+                <span className={props.todo.done ? "line-through" : ""}>
                     {props.todo.text}
                 </span>
             </button>
