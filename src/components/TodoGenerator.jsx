@@ -12,8 +12,8 @@ const TodoGenerator = () => {
     }
     return (
         <div className={"todo-generator-wrapper"}>
-            <input value={text} onChange={handleChange}/>
-            <button onClick={handleAdd}>add</button>
+            <input value={text} onChange={handleChange} className={"todo-generator-input"}/>
+            <button onClick={handleAdd} className={"todo-generator-button"}>add</button>
         </div>
     );
 }

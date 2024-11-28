@@ -1,3 +1,14 @@
 .todo-generator-wrapper {
 
 }
+
+.todo-generator-button {
+    margin-left: 10px;
+    background-color: #6495ee;
+    color: white;
+    border: dodgerblue 1px solid;
+}
+
+.todo-generator-input {
+    width: 250px
+}
