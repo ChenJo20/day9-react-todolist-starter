@@ -1,0 +1,14 @@
+# O
+由于大部分同学都是第一次接触，学习react，所以今天的code review上大家暴露的问题更多，
+彼此之间的讨论也更加激烈。比如很多同学在做作业的时候会遇到累加sum的时候会refresh Counter component的情况，
+因为他们把sum作为一个参数传递给Counter component，而又在Counter component里更新了sum，导致了这一现象。从这个问题，Jeany老师又引出了component更新的场景，分别是组件内state更新，组件的props更新还有父组件更新。
+剩下的时间Jeany老师介绍了useContest和useReducer这两个react hooks，并通过详细的code demo讲解了如何使用这两个hook进行全局的状态管理。下午的competition，
+四个组分别介绍了状态模式、迭代器模式、策略模式和观察者模式，并有通过code sample进行直观深入的讲解。
+
+# R
+learn a lot about design pattern
+
+# I
+今天早上的code review和同学之间的相互讨论不仅帮助大家解决了具体的技术问题，更重要的是通过一些引申出来的知识点增强了大家对React组件生命周期和状态管理的理解。通过对Counter组件问题的讨论，我逐渐明白了单一职责的设计principle，懂得如何正确的传递props来避免不必要的组件重新渲染。Jeany老师介绍的新的全局状态管理的hooks也为我学习react框架打开了新的思路。
+# D
+我会在今后的作业中从单一职责的principle出发来设计组件，从而提高可重用性和可维护性。我也会更加关注组件的状态管理，尤其是避免不必要的重新渲染。
