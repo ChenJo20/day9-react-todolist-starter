@@ -5,11 +5,9 @@ import {useContext} from "react";
 const Todo = (props) => {
     const {dispatch} = useContext(TodoContext);
     const handleChangeDoneStatus = () => {
-        console.log(props.todo.id)
         dispatch({type: "CHANGEDONESTATUS", payload: props.todo.id})
     }
     const handleRemove = () => {
-        console.log(props.todo.id)
         dispatch({type: "REMOVE", payload: props.todo.id})
     }
     return (
