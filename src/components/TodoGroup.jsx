@@ -5,7 +5,7 @@ import {Pagination} from "antd";
 
 const TodoGroup = () => {
     const {state} = useContext(TodoContext)
-    const [currentPageTodos, setCurrentPageTodos] = useState(state.slice(0, 20))
+    const [currentPageTodos, setCurrentPageTodos] = useState(state.slice(0, 5))
     const placeHolderWhenNoTodo = "Add the things you need to do today..."
     const onChange = (page, pageSize) => {
         console.log(page)
