@@ -12,7 +12,8 @@ export const getTodos = async () => {
 
 export const addTodo = async (text) => {
     const response = await instance.post("/todos", {
-        text: text
+        text: text,
+        done: false
     })
     return response.data
 }
@@ -23,7 +24,7 @@ export const removeTodo = async (id) => {
 }
 
 export const toggleTodo = async (id, todo) => {
-    const response = await instance.put("/todos/" + id, {
+    instance.put("/todos/" + id, {
         text: todo.text,
         done: !todo.done
     })
