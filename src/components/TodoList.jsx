@@ -3,6 +3,8 @@ import TodoGenerator from "./TodoGenerator";
 import {useContext, useEffect, useState} from "react";
 import {getTodos} from "../api/todo";
 import {TodoContext} from "../App";
+import {LoadingOutlined} from "@ant-design/icons";
+import {Flex, Spin} from "antd";
 
 const TodoList = () => {
     const {dispatch} = useContext(TodoContext);
@@ -19,7 +21,7 @@ const TodoList = () => {
     }, []);
     return (
         loading
-            ? "I am loading todo list..."
+            ? <Spin indicator={<LoadingOutlined style={{ fontSize: 48, marginTop: "50px"}} spin />} />
             : <div>
                 <h2 style={{margin: "5px"}}>Todo List</h2>
                 <TodoGroup/>
