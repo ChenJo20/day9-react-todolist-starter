@@ -1,12 +1,15 @@
 import "./css/Todo.css"
 import {TodoContext} from "../App";
 import {useContext} from "react";
-import {removeTodo} from "../api/todo";
+import {removeTodo, toggleTodo} from "../api/todo";
 
 const Todo = ({todo}) => {
     const {dispatch} = useContext(TodoContext);
     const handleChangeDoneStatus = () => {
-        dispatch({type: "CHANGEDONESTATUS", payload: todo.id})
+        toggleTodo(todo.id, todo)
+            .then(() => {
+                dispatch({type: "CHANGEDONESTATUS", payload: todo.id})
+            })
     }
     const handleRemove = () => {
         removeTodo(todo.id)

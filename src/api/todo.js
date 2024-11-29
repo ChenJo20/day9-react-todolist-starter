@@ -21,3 +21,10 @@ export const removeTodo = async (id) => {
     const response = await instance.delete("/todos/" + id)
     return response.data
 }
+
+export const toggleTodo = async (id, todo) => {
+    const response = await instance.put("/todos/" + id, {
+        text: todo.text,
+        done: !todo.done
+    })
+}
