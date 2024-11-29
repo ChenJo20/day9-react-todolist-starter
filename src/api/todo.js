@@ -18,6 +18,6 @@ export const addTodo = async (text) => {
 }
 
 export const removeTodo = async (id) => {
-    const response = await instance.delete("/todos" + id)
+    const response = await instance.delete("/todos/" + id)
     return response.data
 }

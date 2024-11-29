@@ -1,6 +1,7 @@
 import "./css/Todo.css"
 import {TodoContext} from "../App";
 import {useContext} from "react";
+import {removeTodo} from "../api/todo";
 
 const Todo = ({todo}) => {
     const {dispatch} = useContext(TodoContext);
@@ -8,8 +9,11 @@ const Todo = ({todo}) => {
         dispatch({type: "CHANGEDONESTATUS", payload: todo.id})
     }
     const handleRemove = () => {
+        removeTodo(todo.id)
+            .then(() => {
+                dispatch({type: "REMOVE", payload: todo.id})
+            })
 
-        dispatch({type: "REMOVE", payload: todo.id})
     }
     return (
         <div className={"todo-wrapper"}>
