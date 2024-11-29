@@ -9,3 +9,15 @@ export const getTodos = async () => {
     const response = await instance.get("/todos");
     return response.data
 }
+
+export const addTodo = async (text) => {
+    const response = await instance.post("/todos", {
+        text: text
+    })
+    return response.data
+}
+
+export const removeTodo = async (id) => {
+    const response = await instance.delete("/todos" + id)
+    return response.data
+}

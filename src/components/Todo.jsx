@@ -8,6 +8,7 @@ const Todo = ({todo}) => {
         dispatch({type: "CHANGEDONESTATUS", payload: todo.id})
     }
     const handleRemove = () => {
+
         dispatch({type: "REMOVE", payload: todo.id})
     }
     return (
