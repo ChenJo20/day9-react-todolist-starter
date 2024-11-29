@@ -29,3 +29,10 @@ export const toggleTodo = async (id, todo) => {
         done: !todo.done
     })
 }
+
+export const updateTodoText = async (id, todo) => {
+    instance.put("/todos/" + id, {
+        text: todo.text,
+        done: todo.done
+    })
+}
