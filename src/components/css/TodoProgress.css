@@ -1,0 +1,67 @@
+.todo-progress-container {
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.todo-progress-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.progress-bar-wrapper {
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 30px;
+}
+
+.progress-bar {
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.red {
+    background-color: #e84133;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: #51d469;
+}
+
+.todo-progress-text {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.happy-face, .sad-face {
+    font-size: 50px;
+    animation: bounce 1s infinite;
+}
+
+.happy-face {
+    animation: bounce-happy 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes bounce-happy {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}

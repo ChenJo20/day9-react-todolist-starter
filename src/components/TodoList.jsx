@@ -5,6 +5,7 @@ import {getTodos} from "../api/todo";
 import {TodoContext} from "../App";
 import {LoadingOutlined} from "@ant-design/icons";
 import {Flex, Pagination, Spin} from "antd";
+import TodoProgress from "./TodoProgress";
 
 const TodoList = () => {
     const {dispatch} = useContext(TodoContext);
@@ -24,6 +25,7 @@ const TodoList = () => {
             ? <Spin indicator={<LoadingOutlined style={{ fontSize: 48, marginTop: "50px"}} spin />} />
             : <div>
                 <h2 style={{margin: "5px"}}>Todo List</h2>
+                <TodoProgress/>
                 <TodoGroup/>
 
                 <TodoGenerator/>
