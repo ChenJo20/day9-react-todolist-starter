@@ -13,7 +13,7 @@ const Todo = ({todo}) => {
     return (
         <div className={"todo-wrapper"}>
             <button onClick={handleChangeDoneStatus} className={"todo-text-wrapper"}>
-                <span className={props.todo.done ? "line-through" : ""}>
+                <span className={todo.done ? "line-through" : ""}>
                     {todo.text}
                 </span>
             </button>
