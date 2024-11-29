@@ -9,14 +9,12 @@ const TodoGenerator = () => {
     const handleChange = (event) => {
         setText(event.target.value);
     }
-    const handleAdd = () => {
+    const handleAdd = async () => {
         if (text.trim().length === 0) {
             return;
         }
-        addTodo(text)
-            .then((todo) => {
-                dispatch({type: "ADD", payload: todo});
-            });
+        const addedTodo = await addTodo(text);
+        dispatch({type: "ADD", payload: addedTodo});
     }
     return (
         <div>
