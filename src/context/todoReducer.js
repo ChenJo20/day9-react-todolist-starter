@@ -1,18 +1,25 @@
 export const initialState = [];
 
+export const ActionType = {
+    "ADD": "ADD",
+    "CHANGEDONESTATUS": "CHANGEDONESTATUS",
+    "REMOVE": "REMOVE",
+    "INIT": "INIT",
+    "UPDATETEXT": "UPDATETEXT"
+}
 export const todoReducer = (state, action) => {
     switch (action.type) {
-        case 'ADD':
+        case ActionType.ADD:
             return [...state, action.payload];
-        case 'CHANGEDONESTATUS':
+        case ActionType.CHANGEDONESTATUS:
             return state.map(todo =>
                 todo.id === action.payload ? { ...todo, done: !todo.done } : todo
             );
-        case 'REMOVE':
+        case ActionType.REMOVE:
             return state.filter(todo => todo.id !== action.payload);
-        case 'INIT':
+        case ActionType.INIT:
             return action.payload;
-        case 'UPDATETEXT':
+        case ActionType.UPDATETEXT:
             return state.map(todo =>
                 todo.id === action.payload.id ? {...todo, text: action.payload.text} : todo
             );

@@ -6,6 +6,7 @@ import {TodoContext} from "../App";
 import {LoadingOutlined} from "@ant-design/icons";
 import {Flex, Pagination, Spin} from "antd";
 import TodoProgress from "./TodoProgress";
+import {ActionType} from "../context/todoReducer";
 
 const TodoList = () => {
     const {dispatch} = useContext(TodoContext);
@@ -14,7 +15,7 @@ const TodoList = () => {
         setLoading(true);
         getTodos()
             .then((todos) => {
-                dispatch({type: "INIT", payload: todos})
+                dispatch({type: ActionType.INIT, payload: todos})
             })
             .finally(() => {
                 setLoading(false)

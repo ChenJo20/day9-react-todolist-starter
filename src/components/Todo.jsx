@@ -4,6 +4,7 @@ import {useContext, useState} from "react";
 import {removeTodo, toggleTodo, updateTodoText} from "../api/todo";
 import {Button, Modal} from "antd";
 import TextArea from "antd/es/input/TextArea";
+import {ActionType} from "../context/todoReducer";
 
 const Todo = ({todo}) => {
     const {dispatch} = useContext(TodoContext);
@@ -12,13 +13,13 @@ const Todo = ({todo}) => {
     const handleChangeDoneStatus = () => {
         toggleTodo(todo.id, todo)
             .then(() => {
-                dispatch({type: "CHANGEDONESTATUS", payload: todo.id})
+                dispatch({type: ActionType.CHANGEDONESTATUS, payload: todo.id})
             })
     }
     const handleRemove = () => {
         removeTodo(todo.id)
             .then(() => {
-                dispatch({type: "REMOVE", payload: todo.id})
+                dispatch({type: ActionType.REMOVE, payload: todo.id})
             })
     }
     const handleOk = () => {
@@ -26,7 +27,7 @@ const Todo = ({todo}) => {
         console.log(updatedTodo)
         updateTodoText(todo.id, updatedTodo)
             .then(() => {
-                dispatch({type: "UPDATETEXT", payload: updatedTodo})
+                dispatch({type: ActionType.UPDATETEXT, payload: updatedTodo})
             })
         setEditorLoaded(!editorLoaded)
     }
