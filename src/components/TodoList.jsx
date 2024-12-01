@@ -28,7 +28,6 @@ const TodoList = () => {
                 <h2 style={{margin: "5px"}}>Todo List</h2>
                 <TodoProgress/>
                 <TodoGroup/>
-
                 <TodoGenerator/>
             </div>
     );

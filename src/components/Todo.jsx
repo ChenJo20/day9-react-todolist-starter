@@ -24,7 +24,6 @@ const Todo = ({todo}) => {
     }
     const handleOk = () => {
         const updatedTodo = {id: todo.id, text: editorText, done: todo.done}
-        console.log(updatedTodo)
         updateTodoText(todo.id, updatedTodo)
             .then(() => {
                 dispatch({type: ActionType.UPDATETEXT, payload: updatedTodo})
