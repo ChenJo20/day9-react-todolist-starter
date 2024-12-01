@@ -7,9 +7,9 @@ const DoneList = () => {
     return (
         <div>
             {doneList.map((doneTodo, index) => {
-                return <span key={doneTodo.id}>
+                return <div key={doneTodo.id}>
                     {doneTodo.text}
-                </span>
+                </div>
             })}
         </div>
     )
